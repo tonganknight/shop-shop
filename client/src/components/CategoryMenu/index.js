@@ -10,7 +10,7 @@ function CategoryMenu() {
 
   const { categories } = state;
 
-  const { loading, data: categoryData } =useQuery(QUERY_CATEGORIES);
+  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
   useEffect(() => {
     if (categoryData) {
@@ -29,7 +29,7 @@ function CategoryMenu() {
         });
       });
     }
-  },  [categoryData, loading, dispatch]);
+  }, [categoryData, loading, dispatch]);
 
   const handleClick = id => {
     dispatch({
