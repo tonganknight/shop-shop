@@ -1,6 +1,7 @@
-//const db = require('./connection');
-//const { User, Product, Category } = require('../models');
+const db = require('./connection');
+const { User, Product, Category } = require('../models');
 
+const runseeds = () =>{
 db.once('open', async () => {
   await Category.deleteMany();
 
@@ -153,3 +154,8 @@ db.once('open', async () => {
 
   process.exit();
 });
+
+}
+
+
+export default runseeds;
