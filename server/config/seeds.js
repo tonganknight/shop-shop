@@ -158,4 +158,4 @@ db.once('open', async () => {
 }
 
 
-export default runseeds;
+export function runseeds()
